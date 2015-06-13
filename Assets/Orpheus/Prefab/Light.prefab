@@ -60,6 +60,7 @@ MonoBehaviour:
   allMeshes: []
   lightRadius: 20
   lightSegments: 12
+  layerMask: 1024
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
