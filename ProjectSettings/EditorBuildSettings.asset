@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Orpheus/title.unity
   - enabled: 1
     path: Assets/Orpheus/playground.unity
+  - enabled: 1
+    path: Assets/Orpheus/Level 1.unity
