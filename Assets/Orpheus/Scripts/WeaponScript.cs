@@ -32,8 +32,8 @@ public class WeaponScript : MonoBehaviour
 	
 	void Update()
 	{
-		bool shoot = Input.GetButtonDown("Fire1");
-		shoot |= Input.GetButtonDown("Fire2");
+		bool shoot;
+		shoot = Input.GetButtonDown("Fire2");
 		// Careful: For Mac users, ctrl + arrow is a bad idea
 		
 		if (shoot)
