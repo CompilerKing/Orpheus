@@ -8,17 +8,13 @@ public class Enemy_Skeleton : MonoBehaviour {
 	int rotationSpeed = 3; //speed of turning
 	float range = 10f;
 	float range2 = 10f;
-	float stop = 0;
+	float stop = 1;
 	Transform myTransform; //current transform data of this enemy
-
-	void Awake()
-	{
-		myTransform = transform; //cache transform data for easy access/preformance
-	}
 	
 	void Start()
 	{
 		target = GameObject.FindWithTag("Player").transform; //target the player
+		myTransform = transform;
 		
 	}
 	
@@ -31,7 +27,6 @@ public class Enemy_Skeleton : MonoBehaviour {
 			                                        Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
 		}
 		else if(distance<=range && distance>stop){
-			
 			//move towards the player
 			myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
 			                                        Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
