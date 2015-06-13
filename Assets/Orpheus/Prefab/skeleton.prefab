@@ -40,10 +40,10 @@ GameObject:
   - 4: {fileID: 418588}
   - 212: {fileID: 21203208}
   - 95: {fileID: 9528588}
-  - 58: {fileID: 5815980}
   - 50: {fileID: 5090744}
   - 114: {fileID: 11416322}
   - 114: {fileID: 11411366}
+  - 61: {fileID: 6164940}
   m_Layer: 2
   m_Name: skeleton
   m_TagString: Untagged
@@ -58,8 +58,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.67824221, y: 1.17123151, z: 0}
-  m_LocalScale: {x: 1.9641, y: 2.0005908, z: 2.03708005}
+  m_LocalPosition: {x: 19.8500004, y: -.0500000007, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 452336}
   - {fileID: 461870}
@@ -105,8 +105,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!58 &5815980
-CircleCollider2D:
+--- !u!61 &6164940
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -115,9 +115,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -.100000001}
   serializedVersion: 2
-  m_Radius: .5
+  m_Size: {x: .300000012, y: .899999976}
 --- !u!95 &9528588
 Animator:
   serializedVersion: 3
