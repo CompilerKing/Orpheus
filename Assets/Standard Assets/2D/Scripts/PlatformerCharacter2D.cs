@@ -22,6 +22,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public Transform eurydicePrefab;
+		private bool hasSpawned = false;
 
         private void Awake()
         {
@@ -115,7 +116,11 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
 			if (!((Application.loadedLevelName == "title") || (Application.loadedLevelName == "intro"))) {
+				if (hasSpawned == false)
+				{
+					hasSpawned = true;
 				StartCoroutine (WaitRout ());
+				}
 			}
         }
 
