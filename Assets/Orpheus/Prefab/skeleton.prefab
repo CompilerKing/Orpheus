@@ -45,6 +45,8 @@ GameObject:
   - 61: {fileID: 6164940}
   - 114: {fileID: 11431382}
   - 58: {fileID: 5853750}
+  - 58: {fileID: 5853798}
+  - 114: {fileID: 11411738}
   m_Layer: 2
   m_Name: skeleton
   m_TagString: Untagged
@@ -59,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.5934181, y: 9.48204136, z: 0}
+  m_LocalPosition: {x: 19.8500004, y: -.0500000007, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 452336}
@@ -119,6 +121,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -.400000006}
   serializedVersion: 2
   m_Radius: .150000006
+--- !u!58 &5853798
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142028}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -.200000003, y: 0}
+  serializedVersion: 2
+  m_Radius: .100000001
 --- !u!61 &6164940
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -162,6 +177,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   isEnemy: 1
+--- !u!114 &11411738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e053b0a94752146e79954ce4df1b5565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11431382
 MonoBehaviour:
   m_ObjectHideFlags: 1
