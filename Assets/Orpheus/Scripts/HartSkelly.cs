@@ -29,10 +29,12 @@ public class HartSkelly : MonoBehaviour {
 
 		Debug.DrawRay(this.transform.position, dir, Color.red);
 
-		if (body.velocity.x > 0) {
-			transform.rotation = new Quaternion(0, 180, 0, 0);
-		} else {
-			transform.rotation = new Quaternion(0, 0, 0, 0);
+		if (body.velocity.magnitude > .05) {
+			if (body.velocity.x > 0) {
+				transform.rotation = new Quaternion(0, 180, 0, 0);
+			} else {
+				transform.rotation = new Quaternion(0, 0, 0, 0);
+			}
 		}
 	}
 }
