@@ -161,7 +161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11401654, guid: 92d83d0b818fc450eb9e61978a017b3c, type: 2}
       propertyPath: m_JumpForce
-      value: 500
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d83d0b818fc450eb9e61978a017b3c, type: 2}
