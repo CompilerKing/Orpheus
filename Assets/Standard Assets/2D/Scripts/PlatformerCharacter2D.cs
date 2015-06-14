@@ -114,7 +114,9 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
-			StartCoroutine(WaitRout());
+			if (!((Application.loadedLevelName == "title") || (Application.loadedLevelName == "intro"))) {
+				StartCoroutine (WaitRout ());
+			}
         }
 
 
@@ -123,7 +125,7 @@ namespace UnityStandardAssets._2D
 			var shotTransform = Instantiate(eurydicePrefab) as Transform;
 			
 			// Assign position
-			shotTransform.position = transform.position;
+			shotTransform.position = (transform.position + new Vector3(-2, 0, 0));
 			yield return new WaitForSeconds(1);
 			//shotTransform.setActive(false); why tf doesnt this work
 			EndGame ();
