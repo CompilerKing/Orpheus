@@ -5,6 +5,8 @@ using System.Collections;
 public class HartSkelly : MonoBehaviour {
 
 	public float moveForce = 50;
+	public float jumpForce = 50;
+	public bool jump = false;
 
 	private GameObject player;
 	private Rigidbody2D body;
@@ -19,6 +21,13 @@ public class HartSkelly : MonoBehaviour {
 	void Update () {
 		Vector2 dir = new Vector2(player.transform.position.x - this.transform.position.x, 0).normalized;
 		body.AddForce(dir * moveForce);
+
+		RaycastHit2D ray = Physics2D.Raycast(this.transform.position, dir, 1);
+		if (ray) {
+			body.AddForce(new Vector2(0, jumpForce));
+		}
+
+		Debug.DrawRay(this.transform.position, dir, Color.red);
 
 		if (body.velocity.x > 0) {
 			transform.rotation = new Quaternion(0, 180, 0, 0);
