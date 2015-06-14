@@ -265,7 +265,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11401654, guid: 92d83d0b818fc450eb9e61978a017b3c, type: 2}
+      propertyPath: eurydicePrefab
+      value: 
+      objectReference: {fileID: 493328, guid: 92a9ab97bab0b4711ba0e900cffee5d1, type: 2}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 92d83d0b818fc450eb9e61978a017b3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &889526555
