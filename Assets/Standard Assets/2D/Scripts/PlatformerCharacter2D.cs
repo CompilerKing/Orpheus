@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections;
+
 
 namespace UnityStandardAssets._2D
 {
@@ -19,6 +21,7 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+		public Transform eurydicePrefab;
 
         private void Awake()
         {
@@ -80,13 +83,15 @@ namespace UnityStandardAssets._2D
                 if (move > 0 && !m_FacingRight)
                 {
                     // ... flip the player.
-                    Flip();
+					Flip ();
+                    //EndGame();
                 }
                     // Otherwise if the input is moving the player left and the player is facing right...
                 else if (move < 0 && m_FacingRight)
                 {
                     // ... flip the player.
-                    Flip();
+					Flip ();
+                    //EndGame ();
                 }
             }
             // If the player should jump...
@@ -109,6 +114,27 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+			StartCoroutine(WaitRout());
         }
-    }
+
+
+		
+		IEnumerator WaitRout() {
+			var shotTransform = Instantiate(eurydicePrefab) as Transform;
+			
+			// Assign position
+			shotTransform.position = transform.position;
+			yield return new WaitForSeconds(1);
+			//shotTransform.setActive(false); why tf doesnt this work
+			EndGame ();
+		}
+
+
+		private void EndGame()
+		{
+
+			Application.LoadLevel("title");
+		}
+	}
+
 }
