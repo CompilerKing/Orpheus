@@ -197,6 +197,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  eurydicePrefab: {fileID: 493328, guid: 92a9ab97bab0b4711ba0e900cffee5d1, type: 2}
 --- !u!114 &11483362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +285,10 @@ Prefab:
       propertyPath: m_JumpForce
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eurydicePrefab
+      value: 
+      objectReference: {fileID: 493328, guid: 92a9ab97bab0b4711ba0e900cffee5d1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161644}
