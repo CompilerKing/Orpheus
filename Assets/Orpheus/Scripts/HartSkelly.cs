@@ -23,7 +23,7 @@ public class HartSkelly : MonoBehaviour {
 		body.AddForce(dir * moveForce);
 
 		RaycastHit2D ray = Physics2D.Raycast(this.transform.position, dir, 1);
-		if (ray) {
+		if (jump && ray) {
 			body.AddForce(new Vector2(0, jumpForce));
 		}
 
